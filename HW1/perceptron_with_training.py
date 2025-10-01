@@ -105,14 +105,14 @@ def perceptron_predict(X, w, b):
     return np.array([activation_binary(v) for v in z], dtype=int)
 
 if __name__ == "__main__":
-    dataset_path = "basic/2Hcircle1.txt"
+    dataset_path = "basic/2Ccircle1.txt"
     X, y = load_dataset(dataset_path)
 
     X_train, X_test, y_train, y_test = split_dataset(X, y)
 
     # training
     w, b, history = perceptron_train(
-        X_train, y_train, lr=0.1, epochs=50, target_acc=0.99
+        X_train, y_train, lr=0.1, epochs=200, target_acc=0.99
     )
 
     # evaluation
