@@ -164,7 +164,7 @@ class App(tk.Tk):
 
     # ---- Actions ----
     def choose_file(self):
-        path = filedialog.askopenfilename(title="選擇資料檔", filetypes=[("Text files", "*.txt")])
+        path = filedialog.askopenfilename(title="choose file", filetypes=[("Text files", "*.txt")])
         if path:
             self.file_var.set(path)
             self.log(f"chosen file: {path}")

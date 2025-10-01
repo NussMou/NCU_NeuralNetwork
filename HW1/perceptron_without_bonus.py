@@ -140,7 +140,7 @@ class App(tk.Tk):
             return
         test_size = float(self.test_ratio_var.get())
         self.X_train, self.X_test, self.y_train, self.y_test = split_dataset(self.X, self.y, test_ratio=test_size)
-        self.log(f"切分完成: 訓練 {len(self.y_train)} 筆, 測試 {len(self.y_test)} 筆")
+        self.log(f"split successfully: 訓練 {len(self.y_train)} 筆, 測試 {len(self.y_test)} 筆")
         self.plot_data()
 
     def train_model(self):
